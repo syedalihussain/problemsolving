@@ -5,50 +5,29 @@ import java.util.*;
 public class coinChange {
 
 	public static int coinChange(int[] coins, int amount) {
-		if (coins.length == 0)
-			return -1;
-		int len = coins.length;
-		LinkedList<Integer> remaining = new LinkedList<>();
-		LinkedList<List<Integer>> combinations = new LinkedList<>();
-		List<Integer> combination = new ArrayList<>();
-		HashSet<Integer> hs = new HashSet<>();
+		int[] checkArray = new int[amount + 1];
+		int fillValue = amount + 1;
+		for (int i = 1; i <= amount; i++) {
+			checkArray[i] = fillValue;
+		}
 
-		remaining.add(amount);
-		combinations.add(combination);
-
-		while (!remaining.isEmpty()) {
-			int currentRemaining = remaining.pop();
-			List<Integer> currentCombination = combinations.pop();
-			if (currentRemaining == 0) {
-				return currentCombination.size();
-			}
-			for (int c : coins) {
-				int diff = (currentRemaining - c);
-				if ((diff) == 0) {
-					return currentCombination.size() + 1;
-				}
-				else if ((diff - c) > 0 && !hs.contains(diff)) {
-					remaining.add(diff);
-					List<Integer> newCombo = new ArrayList<>(currentCombination);
-					newCombo.add(c);
-					combinations.add(newCombo);
-				} else {
-					hs.add(diff);
+		for (int i = 1; i <= amount; i++) {
+			for (int j : coins) {
+				if ((i - j) < 0)
+					continue;
+				else {
+					int currentCell = checkArray[i];
+					int prevCell = checkArray[i - j];
+					checkArray[i] = Math.min(prevCell + 1, currentCell);
 				}
 			}
 		}
 
-		return -1;
-        /*
-        Arrays.sort(coins);
-        List<Integer> combinations = new ArrayList<>();
-        if (findCoinChange(coins, amount, combinations, coins.length - 1))
-            return combinations.size();
-        return -1;
-        */
+		return checkArray[amount] > amount ? -1 : checkArray[amount];
 	}
+
 	public static void main(String[] args) {
 		int[] coins = {1, 2, 5};
-		System.out.println(coinChange(coins, 100));
+		System.out.println(coinChange(coins, 11));
 	}
 }
