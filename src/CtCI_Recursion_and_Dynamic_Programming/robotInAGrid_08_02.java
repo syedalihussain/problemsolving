@@ -18,9 +18,9 @@ public class robotInAGrid_08_02 {
 
 	}
 
-	public static ArrayList<Point> getPath(boolean[][] maze) {
-		
-	}
+//	public static ArrayList<Point> getPath(boolean[][] maze) {
+//
+//	}
 
 	public static void main(String[] args) {
 		HashSet<Point> failedPoints = new HashSet<>();
