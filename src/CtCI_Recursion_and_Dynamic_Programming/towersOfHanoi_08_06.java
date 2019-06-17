@@ -22,11 +22,16 @@ class Tower {
 	}
 
 	public void moveDisks(int numOfDisks, Tower buffer, Tower destination) {
-		for (int i = numOfDisks; i >= 0; i--) {
-
+		if (numOfDisks >= 1) {
+			moveDisks(numOfDisks - 1, destination, buffer);
+			moveTop(destination);
+			buffer.moveDisks(numOfDisks - 1, this, destination);
 		}
 	}
 
+	public Stack<Integer> getStack() {
+		return disks;
+	}
 }
 
 public class towersOfHanoi_08_06 {
@@ -47,5 +52,9 @@ public class towersOfHanoi_08_06 {
 		}
 
 		towers[0].moveDisks(h, towers[1], towers[2]);
+		Stack<Integer> stack = towers[2].getStack();
+		while(!stack.isEmpty()) {
+			System.out.println(stack.pop());
+		}
 	}
 }
