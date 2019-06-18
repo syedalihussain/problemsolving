@@ -9,6 +9,7 @@ public class permutationsII {
 		if (nums == null || nums.length == 0)
 			return null;
 		HashMap<Integer, Integer> countMap = getHashMap(nums);
+		System.out.println(countMap);
 		List<List<Integer>> result = new ArrayList<>();
 		List<Integer> list = new ArrayList<>();
 		permuteUnique(nums.length, list, result, countMap, 0);
@@ -25,7 +26,7 @@ public class permutationsII {
 			int count = countMap.get(i);
 			if (count > 0) {
 				countMap.put(i, count - 1);
-				list.add(count);
+				list.add(i);
 				permuteUnique(len, list, result, countMap, startIndex + 1);
 				list.remove(list.size() - 1);
 				countMap.put(i, count);
@@ -48,7 +49,9 @@ public class permutationsII {
 	}
 
 	public static void main(String[] args) {
-
+		int[] nums = new int[]{1, 1, 2};
+		List<List<Integer>> permutations = permuteUnique(nums);
+		System.out.println(permutations);
 	}
 
 }
