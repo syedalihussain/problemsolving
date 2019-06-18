@@ -26,6 +26,6 @@ public class permutationsWithDistinct_08_07 {
 		System.out.println(list2);
 		list2.remove(list2.size() - 1);
 		System.out.println(list2);
-		
+
 	}
 }
