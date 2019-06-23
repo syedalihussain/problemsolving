@@ -35,22 +35,9 @@ public class combinationSum {
 			combination.remove(combination.size() - 1);
 		}
 	}
-	enum Rank {
-		One, Two, Three;
-		public int getValue() {
-			if (this == Rank.One) {
-				return 1;
-			}
-			return 0;
-		}
-	}
+
 	public static void main(String[] args) {
-		Queue<Integer> queue = new LinkedList<>();
-		queue.add(9);
-		queue.add(3);
-		System.out.println(queue.poll());
-		System.out.println(queue.poll());
-		System.out.println(Rank.One.getValue());
+
 
 	}
 
