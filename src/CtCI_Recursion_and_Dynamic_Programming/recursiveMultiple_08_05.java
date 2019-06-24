@@ -24,6 +24,9 @@ public class recursiveMultiple_08_05 {
 	}
 
 	public static void main(String[] args) {
-
+		String str = "flower";
+		StringBuffer sb = new StringBuffer();
+		StringBuilder sb2 = new StringBuilder();
+		System.out.println(str.substring(0,str.length()));
 	}
 }
