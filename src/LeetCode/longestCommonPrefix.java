@@ -16,7 +16,7 @@ public class longestCommonPrefix {
 			if (!strs[0].substring(start, end).equals(sb)){
 				int j = 0;
 				for (j = 0; j < end; j++) {
-					if (sb.charAt(j) != strs[j].charAt(j)) {
+					if (sb.charAt(j) != strs[i].charAt(j)) {
 						break;
 					}
 				}
@@ -24,7 +24,7 @@ public class longestCommonPrefix {
 				sb.delete(end, sb.length());
 			}
 
-			if ((end - start) == 1)
+			if ((end - start) == 0)
 				return "";
 		}
 		return sb.toString();
