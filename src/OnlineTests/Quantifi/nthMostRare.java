@@ -1,5 +1,6 @@
 package OnlineTests.Quantifi;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -13,10 +14,10 @@ public class nthMostRare {
 		for (int i = 0; i < elements.length; i++) {
 			hashMap.put(elements[i], hashMap.getOrDefault(elements[i], 0) + 1);
 		}
-
-		if (hashMap.size() < num) {
-			return Integer.MAX_VALUE;
-		}
+		Integer[] array = new Integer[hashMap.size()];
+		hashMap.values().toArray(array);
+		Arrays.sort(array);
+		int nthMostRare = array[num - 1];
 		HashMap<Integer, LinkedList<Integer>> countMap = new HashMap<>();
 		int number, count;
 		for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
