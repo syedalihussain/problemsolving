@@ -1,4 +1,4 @@
-package OnlineTests;
+package OnlineTests.IMC;
 
 import java.util.HashMap;
 import java.util.HashSet;
