@@ -1,9 +1,11 @@
 package OnlineTests.Quantifi;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.TreeMap;
@@ -34,6 +36,7 @@ public class nthMostRare {
 	public static void main(String[] args) {
 		int x = nthMostRare(new int[]{5,4,3,2,1,5,4,3,2,5,4,3,5,4,5}, 2);
 		System.out.println(x);
+		List<Integer> list = new ArrayList<>();
 	}
 
 }
