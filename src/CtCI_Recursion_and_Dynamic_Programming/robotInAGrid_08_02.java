@@ -17,7 +17,7 @@ public class robotInAGrid_08_02 {
 
 
 	}
-
+//	Need to do robot in a Grid
 //	public static ArrayList<Point> getPath(boolean[][] maze) {
 //
 //	}
