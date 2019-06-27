@@ -10,34 +10,47 @@ public class elevatorStops {
 		//	Y weight capacity
 		//	M num of floors in the building
 		//	B destinations of people
-		int head = 0;
-		int len = A.length;
-		HashSet<Integer> hs;
+		//	A = [60, 80, 40]
+		//	B = [ 2,  3,  5]
+		int numOfPeople = A.length;
 		int stops = 0;
-		int currentCapacity = 0;
-		int sumWeight = 0;
-		int sumPeople = 0;
-		while (head < len) {
-			hs = new HashSet<>();
-			stops = 0;
-			sumWeight = 0;
-			sumPeople = 0;
-			while (head < len && sumPeople < X && sumWeight < Y) {
-				int currentWeight = B[head];
+		HashSet<Integer> set;
+		int i = 0;
+		int currentCapacity;
+		int currentWeight;
+		while (i < numOfPeople) {
+			set = new HashSet<>();
+			currentCapacity = 0;
+			currentWeight = 0;
+			//	Take care of edge cases
+			while (i < numOfPeople && currentCapacity < X) {
+				if ((A[i] + currentWeight) <= Y) {
+					currentWeight += A[i];
+					currentCapacity++;
+					if (!set.contains(B[i])) {
+						set.add(B[i]);
+					}
+				} else {
+					break;
+				}
+				i++;
 			}
+			stops += set.size() + 1;
 		}
 
 
-		return 0;
+		return stops;
 	}
 
-	public static void exceptionThrowingMethod() throws IndexOutOfBoundsException {
-		int i = 0;
-	}
 
 
 	public static void main(String[] args) {
-		HashMap<String, String> hm = new HashMap<>();
-		hm.put("None", "City");
+		int[] A1 = {60, 80, 40};
+		int[] B1 = {2,  3,  5};
+		System.out.println(calculateElevatorStops(A1, B1, 5, 2, 200));
+
+		int[] A2 = {40, 40, 100, 80, 20};
+		int[] B2 = {3, 3, 2, 2, 3};
+		System.out.println(calculateElevatorStops(A2, B2, 3, 5, 200));
 	}
 }

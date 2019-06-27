@@ -37,6 +37,10 @@ public class nthMostRare {
 		int x = nthMostRare(new int[]{5,4,3,2,1,5,4,3,2,5,4,3,5,4,5}, 2);
 		System.out.println(x);
 		List<Integer> list = new ArrayList<>();
+		int mask = 9;
+		System.out.println(mask);
+		mask = mask ^ (1);
+		System.out.println(mask);
 	}
 
 }
