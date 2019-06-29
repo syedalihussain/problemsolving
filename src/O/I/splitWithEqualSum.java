@@ -1,4 +1,4 @@
-package O;
+package O.I;
 
 public class splitWithEqualSum {
 	//	Add in the functionality of handling overrunning

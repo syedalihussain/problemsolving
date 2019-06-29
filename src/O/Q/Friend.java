@@ -1,4 +1,4 @@
-package O.Quantifi;
+package O.Q;
 
 import java.util.ArrayList;
 import java.util.Collection;

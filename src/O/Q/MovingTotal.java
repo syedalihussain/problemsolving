@@ -1,4 +1,4 @@
-package O.Quantifi;
+package O.Q;
 
 import java.util.HashSet;
 import java.util.LinkedList;
