@@ -1,4 +1,4 @@
-package OnlineTests;
+package O;
 
 public class splitWithEqualSum {
 	//	Add in the functionality of handling overrunning

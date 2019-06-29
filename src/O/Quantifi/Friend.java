@@ -1,4 +1,4 @@
-package OnlineTests.Quantifi;
+package O.Quantifi;
 
 import java.util.ArrayList;
 import java.util.Collection;

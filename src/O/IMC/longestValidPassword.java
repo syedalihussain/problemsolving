@@ -1,4 +1,4 @@
-package OnlineTests.IMC;
+package O.IMC;
 
 import java.util.ArrayList;
 import java.util.List;
