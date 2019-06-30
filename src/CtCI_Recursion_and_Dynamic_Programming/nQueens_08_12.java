@@ -3,7 +3,7 @@ package CtCI_Recursion_and_Dynamic_Programming;
 import java.util.ArrayList;
 import java.util.List;
 
-public class nQueens {
+public class nQueens_08_12 {
 	public static int totalNQueens(int n) {
 		int count = 0;
 		List<Integer> results = new ArrayList<>();
