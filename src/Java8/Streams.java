@@ -18,5 +18,7 @@ public class Streams {
 				.sum();
 
 		System.out.println(sum);
+
+		System.out.println("The weekend is here!!!");
 	}
 }
