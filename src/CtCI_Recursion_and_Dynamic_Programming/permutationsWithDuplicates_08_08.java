@@ -1,5 +1,6 @@
 package CtCI_Recursion_and_Dynamic_Programming;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -38,5 +39,11 @@ public class permutationsWithDuplicates_08_08 {
 
 	public static void main(String[] args) {
 		System.out.println(getPerms("aaaa"));
+		String pal = "";
+		System.out.println(pal.length());
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		System.out.println(list.get(1));
 	}
 }
