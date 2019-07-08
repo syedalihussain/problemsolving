@@ -9,26 +9,26 @@ public class longestPalindromicSubstring {
 		//  Create a HashMap<Character, ArrayList<Integer>>
 		HashMap<Character, ArrayList<Integer>> map = new HashMap<>();
 		ArrayList<Integer> indexes;
-		for (int i = 0; i < s.length(); i++) {
-			if (!map.containsKey(s.charAt(i))) {
+		char[] charArray = s.toCharArray();
+		int len = charArray.length;
+		for (int i = 0; i < len; i++) {
+			if (!map.containsKey(charArray[i])) {
 				indexes = new ArrayList<>();
 				indexes.add(i);
-				map.put(s.charAt(i), indexes);
+				map.put(charArray[i], indexes);
 			} else {
-				indexes = map.get(s.charAt(i));
+				indexes = map.get(charArray[i]);
 				indexes.add(i);
-				map.put(s.charAt(i), indexes);
+				map.put(charArray[i], indexes);
 			}
 		}
 		String palindrome = "";
-		char[] charArray = s.toCharArray();
-		int len = charArray.length;
 		int i = 0;
 		while ((i + palindrome.length()) < len) {
 			indexes = map.get(charArray[i]);
 			for (int j = indexes.size()-1; j >= 0; j--) {
 				int k = indexes.get(j);
-				if ((k-i+1) < palindrome.length()) {
+				if ((k-i+1) <= palindrome.length()) {
 					break;
 				}
 				if (checkPalindrome(charArray, i, k)) {
@@ -41,15 +41,20 @@ public class longestPalindromicSubstring {
 		return palindrome;
 	}
 	private static boolean checkPalindrome(char[] charArray, int s, int e) {
-		for (int i = s; i < (e-s)/2; i++) {
-			if (charArray[i] != charArray[e-s-i])
+		for (int i = s; i <= s+(e-s)/2; i++) {
+			if (charArray[i] != charArray[e-i+s])
 				return false;
 		}
 		return true;
 	}
 
 	public static void main(String[] args) {
-		
+//		String p1 = "abcabacdd";
+//		char[] charArray = p1.toCharArray();
+//		System.out.println(checkPalindrome(charArray, 2, 6));
+//		String p2 = "abavfcabacdd";
+//		System.out.println(checkPalindrome(p2.toCharArray(), 5, 9));
+		System.out.println(longestPalindrome("aaabaaa"));
 	}
 
 }
