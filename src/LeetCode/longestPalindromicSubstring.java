@@ -49,12 +49,12 @@ public class longestPalindromicSubstring {
 	}
 
 	public static void main(String[] args) {
-//		String p1 = "abcabacdd";
+		String p1 = "aabcbc";
 //		char[] charArray = p1.toCharArray();
 //		System.out.println(checkPalindrome(charArray, 2, 6));
-//		String p2 = "abavfcabacdd";
+		String p2 = "bc";
 //		System.out.println(checkPalindrome(p2.toCharArray(), 5, 9));
-		System.out.println(longestPalindrome("aaabaaa"));
+		System.out.println(p1.indexOf(p2, 2));
 	}
 
 }
