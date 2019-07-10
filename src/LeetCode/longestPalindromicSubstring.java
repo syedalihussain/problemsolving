@@ -55,6 +55,7 @@ public class longestPalindromicSubstring {
 		String p2 = "bc";
 //		System.out.println(checkPalindrome(p2.toCharArray(), 5, 9));
 		System.out.println(p1.indexOf(p2, 2));
+		//	Streams.
 	}
 
 }
