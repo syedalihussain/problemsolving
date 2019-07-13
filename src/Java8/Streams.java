@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Streams {
 
@@ -25,16 +26,13 @@ public class Streams {
 				.mapToInt(arr->IntStream.of(arr).sum()) // sum the inner array
 				.sum();
 
-		System.out.println(sum);
+		Stream.of(arrayOfEmps);
 
-		System.out.println("The weekend is here!!!");
-		List<Integer> list = new ArrayList<>();
-		list.add(0, 1);
-		System.out.println(list);
-		StringBuilder sb = new StringBuilder();
-		sb.append('3');
-		sb.append('4');
-		sb.deleteCharAt(0);
-		System.out.println(Integer.parseInt(sb.toString()));
+		List<Employee> empList = Arrays.asList(arrayOfEmps);
+		empList.stream();
+
+		//	Increment the salary for all the employees
+		empList.stream().forEach(e -> e.incrementSalary(10.0));
+
 	}
 }
