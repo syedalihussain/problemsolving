@@ -3,6 +3,7 @@ package Java8;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -34,5 +35,11 @@ public class Streams {
 		//	Increment the salary for all the employees
 		empList.stream().forEach(e -> e.incrementSalary(10.0));
 
+
+//		Integer[] empIds = {1,2,3};
+//		List<Employee> employees = Stream.of(empIds)
+//																	.filter(e -> e != null)
+//																	.filter(e -> e.getSalary() > 20000)
+//																	.collect(Collectors.toList());
 	}
 }

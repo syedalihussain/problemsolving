@@ -14,5 +14,9 @@ public class Employee {
 	public void incrementSalary(double v) {
 		this.salary += v;
 	}
+
+	public double getSalary() {
+		return this.salary;
+	}
 }
 
