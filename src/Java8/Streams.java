@@ -41,5 +41,6 @@ public class Streams {
 //																	.filter(e -> e != null)
 //																	.filter(e -> e.getSalary() > 20000)
 //																	.collect(Collectors.toList());
+
 	}
 }
