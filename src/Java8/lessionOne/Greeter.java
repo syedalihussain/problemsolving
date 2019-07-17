@@ -13,7 +13,11 @@ public class Greeter {
 		sb2.deleteCharAt(sb2.length()-1);
 		System.out.println(sb2.toString());
 
-		greetingFunction = () -> System.out.println("Hello World!");
-		doubleNumberFunction = (int a) -> a * 2;
-		addFunction = (int a, int b) -> a + b;
+		MyLambda myLambda = () -> System.out.println("Hello world !!!");
+}
+
+
+}
+interface MyLambda {
+	void foo();
 }
