@@ -14,10 +14,16 @@ public class Greeter {
 		System.out.println(sb2.toString());
 
 		MyLambda myLambda = () -> System.out.println("Hello world !!!");
+
+		AddFunction addFunction = (int a, int b) -> a + b;
 }
 
 
 }
 interface MyLambda {
 	void foo();
+}
+
+interface AddFunction {
+	int add(int x, int y);
 }
