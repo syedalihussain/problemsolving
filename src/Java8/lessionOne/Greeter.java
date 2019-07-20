@@ -7,15 +7,22 @@ public class Greeter {
 	}
 
 	public static void main(String[] args) {
-		StringBuilder sb = new StringBuilder("bc");
-		StringBuilder sb2 = new StringBuilder("ab");
-		StringBuilder sb3 = sb.append(sb2);
-		sb2.deleteCharAt(sb2.length()-1);
-		System.out.println(sb2.toString());
 
-		Greeting myLambda = () -> System.out.println("Hello world !!!");
+		Greeter greeter = new Greeter();
+		Greeting helloWorldGreeting = new HelloWorldGreeting();
+		Greeting lambdaGreeting = () -> System.out.println("Hello world lambda!!!");
 
-}
+		Greeting innerClassGreeting = new Greeting() {
+			@Override
+			public void perform() {
+				System.out.println("Hello World inner");
+			}
+		};
+
+		lambdaGreeting.perform();
+		helloWorldGreeting.perform();
+		innerClassGreeting.perform();
+	}
 
 
 }
