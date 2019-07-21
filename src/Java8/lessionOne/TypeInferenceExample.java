@@ -1,6 +1,6 @@
 package Java8.lessionOne;
 
-public class TypeInference {
+public class TypeInferenceExample {
 
 
 	interface StringLengthLambda {
