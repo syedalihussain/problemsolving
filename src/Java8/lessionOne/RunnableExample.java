@@ -16,6 +16,8 @@ public class RunnableExample {
 		Thread myLambdaThread = new Thread(() -> System.out.println("Printed inside Lambda Runnable"));
 		myLambdaThread.run();
 
+		System.out.println(Integer.toBinaryString(-3));
+
 	}
 
 }
