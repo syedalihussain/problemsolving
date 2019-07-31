@@ -12,5 +12,7 @@ public class minimumAsciiDelete {
         sb.deleteCharAt(2);
         System.out.println(sb.toString());
 
+        //  Another commit
+
     }
 }
