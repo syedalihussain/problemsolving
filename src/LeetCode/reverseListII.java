@@ -1,7 +1,5 @@
 package LeetCode;
 
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.tools.javac.util.ArrayUtils;
 
 import java.lang.reflect.Array;
 import java.util.*;

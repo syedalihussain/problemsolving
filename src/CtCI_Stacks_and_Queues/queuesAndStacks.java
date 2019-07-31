@@ -3,7 +3,6 @@ package CtCI_Stacks_and_Queues;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
-import sun.awt.image.ImageWatched.Link;
 
 public class queuesAndStacks {
 
