@@ -6,13 +6,11 @@ public class minimumAsciiDelete {
 
 
     public static void main(String[] args) {
-        String str = "abcde";
+        String str = "";
         StringBuilder sb = new StringBuilder(str);
 
-        sb.deleteCharAt(2);
-        System.out.println(sb.toString());
-
-        //  Another commit
+        System.out.println(str.equals(""));
+        // Solve using dynamic programming
 
     }
 }
