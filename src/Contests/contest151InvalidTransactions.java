@@ -1,25 +1,18 @@
-package LeetCode;
+package Contests;
 
 import java.util.*;
 
-public class triangle {
-    public static int minimumTotal(List<List<Integer>> triangle) {
-        int height = triangle.size(), sum = 0;
-        int l, r, c, b;
-        for (int h = height-2; h >= 0; h--) {
-            List<Integer> current = triangle.get(h);
-            List<Integer> bottom = triangle.get(h+1);
-            for (int i = 0; i < current.size(); i++) {
-                l = (i == 0 ? bottom.get(0) : bottom.get(i-1));
-                r = (i == current.size()-1 ? bottom.get(i) : bottom.get(i+1));
-                b = bottom.get(i);
-                c = current.get(i) + Math.min(b, Math.min(l,r));
-                current.set(i, c);
-            }
-        }
-        return triangle.get(0).get(0);
-    }
+public class contest151InvalidTransactions {
+    /*
+    ["alex,741,1507,barcelona","xnova,683,1149,amsterdam","bob,52,1152,beijing","bob,137,1261,beijing",
+    "bob,607,14,amsterdam","bob,307,645,barcelona","bob,220,105,beijing","xnova,914,715,beijing","alex,279,632,beijing"]
 
+    ["chalicefy,639,1283,beijing","maybe,324,192,frankfurt","bob,627,974,amsterdam","alex,962,125,chicago",
+    "iris,849,36,beijing","chalicefy,70,415,bangkok","chalicefy,112,467,frankfurt","xnova,358,82,barcelona",
+    "chalicefy,180,543,beijing","xnova,624,572,budapest","lee,651,1761,chicago","alex,991,1698,budapest",
+    "bob,531,700,amsterdam","chalicefy,926,478,budapest","iris,235,1993,frankfurt","alex,107,812,beijing",
+    "maybe,199,1313,barcelona"]
+     */
     public static void main(String[] args) {
         List<HashSet<Integer>> rowSets = new ArrayList<>();
         HashSet<Integer> set = new HashSet<>();
