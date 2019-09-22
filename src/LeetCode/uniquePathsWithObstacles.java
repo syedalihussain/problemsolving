@@ -32,6 +32,11 @@ public class uniquePathsWithObstacles {
 					{1}
 						};
 		System.out.println(uniquePathsWithObstacles(obstacleGrid));
+		StringBuilder sb = new StringBuilder();
+		sb.append('a');
+		sb.append('b');
+		sb.append(sb);
+		System.out.println(sb.toString());
 	}
 
 }

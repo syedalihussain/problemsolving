@@ -36,6 +36,8 @@ public class nthMostRare {
 		System.out.println(mask);
 		mask = mask ^ (1);
 		System.out.println(mask);
+		Integer integer = 123;
+		System.out.println(integer);
 	}
 
 }

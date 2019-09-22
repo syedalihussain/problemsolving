@@ -23,5 +23,6 @@ public class reverseList {
 		Queue<Integer> queue = new LinkedList<>();
 		StringBuilder sb = new StringBuilder();
 		sb.reverse().toString();
+		ArrayList<Integer> res = new ArrayList<>();
 	}
 }

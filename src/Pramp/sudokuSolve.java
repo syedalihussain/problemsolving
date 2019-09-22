@@ -1,8 +1,6 @@
 package Pramp;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class sudokuSolve {
 	static ArrayList<HashSet<Integer>> boxSetsG;
@@ -145,5 +143,6 @@ public class sudokuSolve {
 			}
 			System.out.println();
 		}
+		HashMap<String, List<Integer>> cityMap = new HashMap<>();
 	}
 }
