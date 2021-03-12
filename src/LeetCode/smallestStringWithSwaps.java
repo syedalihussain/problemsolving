@@ -68,7 +68,7 @@ public class smallestStringWithSwaps {
         list.add(2);
         pairs.add(list);
         System.out.println(pairs);
-        String str = "dcab";
+        String str = "vbjjxgdfnru";
         System.out.println(smallestStringWithSwaps(str, pairs));
     }
 }
